@@ -12,7 +12,6 @@ export default {
     privateKey: process.env.PRIVATE_KEY,
     clientEmail: 'account1@market-visit-count.iam.gserviceaccount.com',
   },
-  allFilter: ['/'],
   startDate: '2010-01-01',
   endDate: 'today'
 }

@@ -1,13 +1,11 @@
-import { NowRequest, NowResponse } from '@vercel/node'
 import { BetaAnalyticsDataClient } from '@google-analytics/data'
 import config from './config'
 
 /**
  * hit count. Served by Google Analytics
  */
-export default async (req: NowRequest, resp: NowResponse) => {
-  // API query page parameter
-  const { page = '' } = req.query
+exports.handler = async (event) => {
+  const page = event.queryStringParameters.page || "";
   const analyticsDataClient = new BetaAnalyticsDataClient({ projectId: config.auth.projectId, credentials: { client_email: config.auth.clientEmail, private_key: config.auth.privateKey }, scopes: 'https://www.googleapis.com/auth/analytics.readonly' });
 
   // Runs a simple report.
@@ -47,6 +45,8 @@ export default async (req: NowRequest, resp: NowResponse) => {
     resData = { key: page, value: "0" }
   }
 
-  resp.setHeader('Access-Control-Allow-Origin', '*')
-  resp.status(200).send(resData)
-}
+  return {
+    statusCode: 200,
+    body: JSON.stringify(resData),
+  };
+};

@@ -7,9 +7,7 @@
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
-    "@vercel/node": "^1.7.1"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@google-analytics/data": "^3.0.3"
   }
