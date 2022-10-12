@@ -1,6 +1,12 @@
 import { BetaAnalyticsDataClient } from '@google-analytics/data'
 import config from './config'
 
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
+};
+
 /**
  * hit count. Served by Google Analytics
  */
@@ -48,5 +54,6 @@ exports.handler = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify(resData),
+    headers
   };
 };
