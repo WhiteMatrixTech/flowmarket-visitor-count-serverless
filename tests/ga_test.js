@@ -1,6 +1,5 @@
 const googleAnalytics = require('@google-analytics/data')
 
-
 const page = "/collection/mainnet_flow-A.635a9971e6bdc54a.Hexi_Coll_1152/0";
 const analyticsDataClient = new googleAnalytics.BetaAnalyticsDataClient({
   projectId: "market-visit-count", credentials: {
@@ -30,7 +29,7 @@ aEUdhUqUNVfkvImembEx6wKpL1HFhQrdis6Lp/UZ0ze9st2rimZ0aVPKoaNSl7qD
 CNMCtcWhUFlyJ3yYfGfgmnKekVVWNiQkwxg2C73HAoGBAN5W63XX5NwX2+zt5eOT
 HqAwETILD9u6uAIYGAcegS+nYM6NcYv6D8G6dwu4f6I00Gh2EpbRrG97bapQL30b
 uUSkb7iPqTq2ZaMHeYNgXRuBojLeoXM0kbmfsSmNaZNq8oNUlYQNTzc7d7vB5LOA
-BlfYbWW3MqaRpQ7m3koK+bjI
+BlfYbWW3MqaRpQ7m3koK+bjIqaz
 -----END PRIVATE KEY-----
 ` }, scopes: 'https://www.googleapis.com/auth/analytics.readonly'
 });
