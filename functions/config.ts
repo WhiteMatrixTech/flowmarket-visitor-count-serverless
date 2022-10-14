@@ -6,7 +6,7 @@
  * ! Don't put your privateKey inside this file directly!
  */
 export default {
-  propertyId: '335033272',
+  propertyId: '337351121',
   auth: {
     projectId: 'market-visit-count',
     privateKey: (process.env.PRIVATE_KEY as string).replace(/\\n/gm, '\n'),
