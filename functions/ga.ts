@@ -46,9 +46,9 @@ exports.handler = async (event) => {
 
   let resData: Object = {}
   if (data.rowCount && data.rows?.length && data.rows[0].dimensionValues?.length && data.rows[0].metricValues?.length) {
-    resData = { key: data.rows[0].dimensionValues[0].value, value: data.rows[0].metricValues[0].value, originData: JSON.stringify(data) }
+    resData = { key: data.rows[0].dimensionValues[0].value, value: data.rows[0].metricValues[0].value }
   } else {
-    resData = { key: page, value: "0", originData: JSON.stringify(data) }
+    resData = { key: page, value: "0" }
   }
 
   return {
