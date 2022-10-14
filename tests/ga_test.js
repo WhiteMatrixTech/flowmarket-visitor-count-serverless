@@ -1,6 +1,7 @@
 const googleAnalytics = require('@google-analytics/data')
 
 const page = "/collection/mainnet_flow-A.635a9971e6bdc54a.Hexi_Coll_1152/0";
+//For test: remove special string
 const analyticsDataClient = new googleAnalytics.BetaAnalyticsDataClient({
   projectId: "market-visit-count", credentials: {
     client_email: "account1@market-visit-count.iam.gserviceaccount.com", private_key: `-----BEGIN PRIVATE KEY-----
